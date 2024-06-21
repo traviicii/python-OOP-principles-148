@@ -13,7 +13,7 @@
 class Smartphone():
 
     def __init__(self, model, credit_card, operating_system):
-        self.model = model
+        self.model = model # Public attribute
         self.__wallet = credit_card # Private attribute, only accessible within this class
         self._operating_system = operating_system # Protected attribute, accessible within this class and subclasses
 
