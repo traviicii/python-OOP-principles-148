@@ -8,6 +8,9 @@ class Wizard(Character):
         self.mana = mana
 
     def cast_fireball(self, target):
+        if not target.still_alive():
+            print(f"{target.name} is already dead!!! X_X")
+            return
         damage = self.calculate_damage()
         print(f"{self.name} casts fireball on {target.name}")
         target.hp -= damage
@@ -21,20 +24,24 @@ class Wizard(Character):
 gandalf = Wizard("Gandalf", 100, 100, 100)
 saruon = Wizard("Sauron", 100, 100, 100)
 
-# gandalf.attack(saruon)
-# gandalf.attack(saruon)
-# gandalf.cast_fireball(saruon)
-# gandalf.attack(saruon)
-# gandalf.cast_fireball(saruon)
-# gandalf.attack(saruon)
-# gandalf.attack(saruon)
-# gandalf.cast_fireball(saruon)
-# gandalf.attack(saruon)
-# gandalf.attack(saruon)
-# gandalf.attack(saruon)
+gandalf.attack(saruon)
+gandalf.attack(saruon)
+gandalf.cast_fireball(saruon)
+gandalf.attack(saruon)
+gandalf.cast_fireball(saruon)
+gandalf.attack(saruon)
+gandalf.attack(saruon)
+gandalf.cast_fireball(saruon)
+gandalf.attack(saruon)
+gandalf.attack(saruon)
+gandalf.attack(saruon)
 
-gandalf.cast_fireball(saruon)
-gandalf.cast_fireball(saruon)
-gandalf.cast_fireball(saruon)
-gandalf.cast_fireball(saruon)
-gandalf.cast_fireball(saruon)
+# gandalf.cast_fireball(saruon)
+# gandalf.cast_fireball(saruon)
+# gandalf.cast_fireball(saruon)
+# gandalf.cast_fireball(saruon)
+# gandalf.cast_fireball(saruon)
+
+# d()
+# print(type(gandalf))
+# print(isinstance(gandalf, Character))
